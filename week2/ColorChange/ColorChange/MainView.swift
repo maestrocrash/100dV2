@@ -68,7 +68,12 @@ struct MainView: View {
         
         let dictionary: [ColorStruct: Color] = [
             ColorStruct(oneColor: .blue, secondColor: .red): .purple,
-            ColorStruct(oneColor: .yellow, secondColor: .red): .green,
+            ColorStruct(oneColor: .yellow, secondColor: .black): .gray,
+            ColorStruct(oneColor: .yellow, secondColor: .red): .orange,
+            ColorStruct(oneColor: .red, secondColor: .green): .brown,
+            ColorStruct(oneColor: .blue, secondColor: .green): .cyan,
+            ColorStruct(oneColor: .red, secondColor: .white): .pink,
+            
         ]
         
         guard oneColor != secondColor else {
