@@ -5,17 +5,27 @@
 //  Created by MICHAIL SHAKHVOROSTOV on 30.10.2023.
 //
 
+import ConfettiSwiftUI
 import SwiftUI
 
 struct ContentView: View {
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Spain", "UK", "Ukraine", "US"].shuffled()
     
     @State private var correctAnswer = Int.random(in: 0...2)
-    @State private var score = 0
+    @State private var score = 0.0
     
+    @State private var animationAmount = 0.0
     
     @State private var showiingScore = false
     @State private var scoreTitle = ""
+    
+    @State private var countQuestion = 0
+    
+    @State private var counter: Int = 0
+    
+    var percentTrueQustion: String {
+        return "\(((100.0 * score) / 8).formatted()) %"
+    }
     
     var body: some View {
         ZStack {
@@ -49,9 +59,18 @@ struct ContentView: View {
                     
                     ForEach(0..<3) {number in
                         Button {
-                            flagTapperd(number)
+                            withAnimation {
+                                flagTapperd(number)
+                                animationAmount -= 360
+                            }
+                            
                         } label: {
                             FlagImage(imageName: countries[number])
+                               // .animation(.easeIn, value: trueAnswer)
+                                .rotation3DEffect(
+                                .degrees(animationAmount),
+                                axis: (x: 0.0, y: 1.0, z: 0.0)
+                            )
                         }
                         
                     }
@@ -63,34 +82,46 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Text("Score:\(score)")
-                    .foregroundStyle(.white)
-                    .font(.title.bold())
+//                Text("Score:\(score)")
+//                    .foregroundStyle(.white)
+//                    .font(.title.bold())
                 
                 Spacer()
             }
             .padding(20)
         }
-        .alert(scoreTitle, isPresented: $showiingScore) {
-            Button("Continue", action: askQuestion)
+        .alert("Game Over", isPresented: $showiingScore) {
+            Button("New game", action: newGame)
         } message: {
-            Text("Your score is \(score)")
-        }
-        
+            Text("You answered correctly out of 8 questions \(score.formatted()) \n This is \(percentTrueQustion)")
+        }.confettiCannon(counter: $counter, repetitions: 3, repetitionInterval: 0.7)
     }
     
     func flagTapperd( _ number: Int) {
         if number == correctAnswer {
             scoreTitle = "Correct"
             score += 1
+            countQuestion += 1
+            askQuestion()
         } else {
             scoreTitle = "Wrong this is flag \(countries[number])"
-            score = 0
+            //score = 0
+            countQuestion += 1
+            askQuestion()
         }
         
-        showiingScore = true
+        guard countQuestion != 8 else {
+            counter += 1
+            return showiingScore = true
+        }
     }
     
+    func newGame() {
+        countQuestion = 0
+        score = 0
+        askQuestion()
+    }
+ 
     func askQuestion() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0..<2)

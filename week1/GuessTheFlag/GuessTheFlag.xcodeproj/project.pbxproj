@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D3198DC02AF278A000BD4ED3 /* FlagImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3198DBF2AF278A000BD4ED3 /* FlagImageView.swift */; };
+		D331672E2B04FCC800F940E9 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D331672D2B04FCC800F940E9 /* ConfettiSwiftUI */; };
 		D35FECC22AEFFB5800EE661E /* GuessTheFlagApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35FECC12AEFFB5800EE661E /* GuessTheFlagApp.swift */; };
 		D35FECC42AEFFB5800EE661E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35FECC32AEFFB5800EE661E /* ContentView.swift */; };
 		D35FECC62AEFFB5A00EE661E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D35FECC52AEFFB5A00EE661E /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D331672E2B04FCC800F940E9 /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +88,9 @@
 			dependencies = (
 			);
 			name = GuessTheFlag;
+			packageProductDependencies = (
+				D331672D2B04FCC800F940E9 /* ConfettiSwiftUI */,
+			);
 			productName = GuessTheFlag;
 			productReference = D35FECBE2AEFFB5800EE661E /* GuessTheFlag.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +119,9 @@
 				Base,
 			);
 			mainGroup = D35FECB52AEFFB5800EE661E;
+			packageReferences = (
+				D331672C2B04FCC800F940E9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = D35FECBF2AEFFB5800EE661E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -348,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D331672C2B04FCC800F940E9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D331672D2B04FCC800F940E9 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D331672C2B04FCC800F940E9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D35FECB62AEFFB5800EE661E /* Project object */;
 }
