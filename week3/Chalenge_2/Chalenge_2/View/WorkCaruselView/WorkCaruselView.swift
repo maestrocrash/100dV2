@@ -19,16 +19,7 @@ struct WorkCaruselView: View {
                         DetailWork(nameWork: artist)
                             .padding()
                     } label: {
-                        VStack {
-                            RectangleImageView(imageName: artist.image)
-                                .frame(width: 300, height: 300)
-                                .padding(.bottom, 10)
-                                .padding(.trailing, 10)
-                            
-                                Text("\(artist.title)")
-                                .foregroundStyle(.black)
-                                .font(.title2)
-                        }
+                        ItemCaruselWork(imageName: artist.image, artistName: artist.title)
                     }
                 }
             }

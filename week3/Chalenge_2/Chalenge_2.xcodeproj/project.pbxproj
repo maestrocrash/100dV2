@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D363A1D92B0632050045A010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D363A1D82B0632050045A010 /* Assets.xcassets */; };
+		D363A1DB2B063CC40045A010 /* ListViewWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A1DA2B063CC40045A010 /* ListViewWork.swift */; };
+		D363A1DE2B063D850045A010 /* ItemListWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A1DD2B063D850045A010 /* ItemListWork.swift */; };
+		D363A1E12B0640260045A010 /* ItemCaruselWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A1E02B0640260045A010 /* ItemCaruselWork.swift */; };
+		D363A1E32B0642950045A010 /* TextOverlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D363A1E22B0642950045A010 /* TextOverlayList.swift */; };
 		D36831672AFEBEF100C55C80 /* Chalenge_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36831662AFEBEF100C55C80 /* Chalenge_2App.swift */; };
 		D36831692AFEBEF100C55C80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36831682AFEBEF100C55C80 /* ContentView.swift */; };
 		D368316E2AFEBEF300C55C80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D368316D2AFEBEF300C55C80 /* Preview Assets.xcassets */; };
@@ -19,10 +23,18 @@
 		D3E28FE12AFFA57100139216 /* ArtistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28FE02AFFA57100139216 /* ArtistDetailView.swift */; };
 		D3E28FE32AFFAC9B00139216 /* WorkCaruselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28FE22AFFAC9B00139216 /* WorkCaruselView.swift */; };
 		D3E28FE52AFFB35D00139216 /* DetailWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28FE42AFFB35D00139216 /* DetailWork.swift */; };
+		D3EFC7A22B0A260500597079 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D3EFC7A12B0A260500597079 /* Localizable.xcstrings */; };
+		D3EFC7A52B0A397F00597079 /* FlagKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3EFC7A42B0A397F00597079 /* FlagKit */; };
+		D3EFC7AA2B0A418A00597079 /* LocalizationSerivece.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EFC7A92B0A418A00597079 /* LocalizationSerivece.swift */; };
+		D3EFC7AC2B0A41B500597079 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EFC7AB2B0A41B500597079 /* Language.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D363A1D82B0632050045A010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D363A1DA2B063CC40045A010 /* ListViewWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewWork.swift; sourceTree = "<group>"; };
+		D363A1DD2B063D850045A010 /* ItemListWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListWork.swift; sourceTree = "<group>"; };
+		D363A1E02B0640260045A010 /* ItemCaruselWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCaruselWork.swift; sourceTree = "<group>"; };
+		D363A1E22B0642950045A010 /* TextOverlayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextOverlayList.swift; sourceTree = "<group>"; };
 		D36831632AFEBEF100C55C80 /* Chalenge_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chalenge_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36831662AFEBEF100C55C80 /* Chalenge_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chalenge_2App.swift; sourceTree = "<group>"; };
 		D36831682AFEBEF100C55C80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +47,9 @@
 		D3E28FE02AFFA57100139216 /* ArtistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailView.swift; sourceTree = "<group>"; };
 		D3E28FE22AFFAC9B00139216 /* WorkCaruselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkCaruselView.swift; sourceTree = "<group>"; };
 		D3E28FE42AFFB35D00139216 /* DetailWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWork.swift; sourceTree = "<group>"; };
+		D3EFC7A12B0A260500597079 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		D3EFC7A92B0A418A00597079 /* LocalizationSerivece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationSerivece.swift; sourceTree = "<group>"; };
+		D3EFC7AB2B0A41B500597079 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,12 +57,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3EFC7A52B0A397F00597079 /* FlagKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D363A1DC2B063D740045A010 /* ListWork */ = {
+			isa = PBXGroup;
+			children = (
+				D363A1DA2B063CC40045A010 /* ListViewWork.swift */,
+				D363A1DD2B063D850045A010 /* ItemListWork.swift */,
+				D363A1E22B0642950045A010 /* TextOverlayList.swift */,
+			);
+			path = ListWork;
+			sourceTree = "<group>";
+		};
+		D363A1DF2B063FF30045A010 /* WorkCaruselView */ = {
+			isa = PBXGroup;
+			children = (
+				D3E28FE22AFFAC9B00139216 /* WorkCaruselView.swift */,
+				D363A1E02B0640260045A010 /* ItemCaruselWork.swift */,
+			);
+			path = WorkCaruselView;
+			sourceTree = "<group>";
+		};
 		D368315A2AFEBEF100C55C80 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +135,7 @@
 				D368317D2AFEC4BE00C55C80 /* Bundle-Decodable.swift */,
 				D36831742AFEBF7C00C55C80 /* artist.json */,
 				D363A1D82B0632050045A010 /* Assets.xcassets */,
+				D3EFC7AD2B0A41EE00597079 /* Localization */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -109,10 +145,21 @@
 			children = (
 				D3E28FDD2AFFA4D900139216 /* MainView.swift */,
 				D3E28FE02AFFA57100139216 /* ArtistDetailView.swift */,
-				D3E28FE22AFFAC9B00139216 /* WorkCaruselView.swift */,
+				D363A1DF2B063FF30045A010 /* WorkCaruselView */,
 				D3E28FE42AFFB35D00139216 /* DetailWork.swift */,
+				D363A1DC2B063D740045A010 /* ListWork */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D3EFC7AD2B0A41EE00597079 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				D3EFC7A12B0A260500597079 /* Localizable.xcstrings */,
+				D3EFC7A92B0A418A00597079 /* LocalizationSerivece.swift */,
+				D3EFC7AB2B0A41B500597079 /* Language.swift */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +178,9 @@
 			dependencies = (
 			);
 			name = Chalenge_2;
+			packageProductDependencies = (
+				D3EFC7A42B0A397F00597079 /* FlagKit */,
+			);
 			productName = Chalenge_2;
 			productReference = D36831632AFEBEF100C55C80 /* Chalenge_2.app */;
 			productType = "com.apple.product-type.application";
@@ -157,8 +207,12 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = D368315A2AFEBEF100C55C80;
+			packageReferences = (
+				D3EFC7A32B0A397E00597079 /* XCRemoteSwiftPackageReference "FlagKit" */,
+			);
 			productRefGroup = D36831642AFEBEF100C55C80 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -175,6 +229,7 @@
 			files = (
 				D368316E2AFEBEF300C55C80 /* Preview Assets.xcassets in Resources */,
 				D363A1D92B0632050045A010 /* Assets.xcassets in Resources */,
+				D3EFC7A22B0A260500597079 /* Localizable.xcstrings in Resources */,
 				D36831752AFEBF7C00C55C80 /* artist.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,13 +242,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D36831792AFEC2DB00C55C80 /* Artist.swift in Sources */,
+				D363A1DB2B063CC40045A010 /* ListViewWork.swift in Sources */,
 				D3E28FE12AFFA57100139216 /* ArtistDetailView.swift in Sources */,
 				D3E28FDE2AFFA4D900139216 /* MainView.swift in Sources */,
+				D363A1DE2B063D850045A010 /* ItemListWork.swift in Sources */,
 				D36831692AFEBEF100C55C80 /* ContentView.swift in Sources */,
+				D3EFC7AC2B0A41B500597079 /* Language.swift in Sources */,
+				D3EFC7AA2B0A418A00597079 /* LocalizationSerivece.swift in Sources */,
 				D36831672AFEBEF100C55C80 /* Chalenge_2App.swift in Sources */,
 				D3E28FE32AFFAC9B00139216 /* WorkCaruselView.swift in Sources */,
 				D3E28FDC2AFF9EC400139216 /* RectangleImageView.swift in Sources */,
+				D363A1E12B0640260045A010 /* ItemCaruselWork.swift in Sources */,
 				D368317E2AFEC4BE00C55C80 /* Bundle-Decodable.swift in Sources */,
+				D363A1E32B0642950045A010 /* TextOverlayList.swift in Sources */,
 				D3E28FE52AFFB35D00139216 /* DetailWork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +461,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D3EFC7A32B0A397E00597079 /* XCRemoteSwiftPackageReference "FlagKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/madebybowtie/FlagKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D3EFC7A42B0A397F00597079 /* FlagKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3EFC7A32B0A397E00597079 /* XCRemoteSwiftPackageReference "FlagKit" */;
+			productName = FlagKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D368315B2AFEBEF100C55C80 /* Project object */;
 }

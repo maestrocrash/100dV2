@@ -10,6 +10,8 @@ import SwiftUI
 struct ArtistDetailView: View {
     
     let oneArtist: Artist
+    @State private var viewWorks = false
+    @State private var imageViewWorks: String = "list.bullet"
     
     var body: some View {
         NavigationStack {
@@ -26,16 +28,46 @@ struct ArtistDetailView: View {
                         .font(.subheadline.italic())
                         .padding(.bottom)
                     
-                    Text("Work artist")
-                    WorkCaruselView(workArtist: oneArtist.works)
+                    HStack {
+                        Text(LocalizedStringKey("Work artist"))
+                        Spacer()
+                        Button {
+                            viewWorks.toggle()
+                            imageViewW()
+                        }label: {
+                            Image(systemName: imageViewWorks)
+                        }
+                        .frame(width: 30, height: 30)
+                        .tint(.black)
+                        .font(.title)
+                    }
+                    
+                    if viewWorks {
+                        withAnimation {
+                            ListViewWork(worksArtis: oneArtist.works)
+                        }
+                    }else {
+                        withAnimation(.bouncy) {
+                            WorkCaruselView(workArtist: oneArtist.works)
+                        }
+                    }
+                    
                 }
                 .padding()
-                
             }
             .navigationTitle(oneArtist.name)
             .navigationBarTitleDisplayMode(.inline)
         }
     }
+    
+    func imageViewW() {
+        if viewWorks {
+            imageViewWorks = "square.split.2x2.fill"
+        } else {
+            imageViewWorks = "list.bullet"
+        }
+    }
+    
 }
 
 #Preview {
