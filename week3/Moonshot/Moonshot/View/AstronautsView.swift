@@ -11,14 +11,10 @@ struct AstronautsView: View {
     let astronaut: Astronaut
     
     var body: some View {
-        
         ScrollView {
             VStack {
-        
                 CircleImageView(imageName: astronaut.id)
-                    //.resizable()
-                    //.scaledToFit()
-                
+   
                 Text(astronaut.description)
                     .padding()
             }

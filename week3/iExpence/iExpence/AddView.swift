@@ -42,13 +42,23 @@ struct AddView: View {
             }
             .navigationTitle("Add new expenses")
             .toolbar {
-                Button("Save") {
-                    let item = ExpenseItem(name: name, type: type, currenncy: currency, amount: amount)
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") {
+                        dismiss()
+                    }
+                }
                 
-                    expense.items.append(item)
-                    dismiss()
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Save") {
+                        let item = ExpenseItem(name: name, type: type, currenncy: currency, amount: amount)
+                    
+                        expense.items.append(item)
+                        dismiss()
+                    }
                 }
             }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden()
         }
         
     }

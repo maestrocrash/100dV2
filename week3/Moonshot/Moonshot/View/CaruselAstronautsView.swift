@@ -14,25 +14,12 @@ struct CaruselAstronautsView: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
                 ForEach(crew, id: \.role) {crewMember in
-                    NavigationLink {
-                        AstronautsView(astronaut: crewMember.astronaut)
-                    } label: {
+                    NavigationLink(value: crewMember.astronaut) {
                         HStack {
                             CircleImageView(imageName: crewMember.astronaut.id)
-                                .containerRelativeFrame(.horizontal) {width, axis in
+                                .containerRelativeFrame(.horizontal) {width, _ in
                                     width * 0.4
                                 }
-                              //  .padding(.horizontal, -19)
-                            
-//                                    Image(crewMember.astronaut.id)
-//                                        .resizable()
-//                                        .frame(width: 104, height: 72)
-//                                        .clipShape(.capsule)
-//                                        .overlay(
-//                                            Capsule()
-//                                                .strokeBorder(.white, lineWidth: 1)
-//                                        )
-                            
                             VStack(alignment: .leading) {
                                 Text(crewMember.astronaut.name)
                                     .foregroundStyle(.white)
@@ -44,7 +31,30 @@ struct CaruselAstronautsView: View {
                         }
                         .padding(.horizontal)
                     }
+                    
+//                    NavigationLink {
+//                        AstronautsView(astronaut: crewMember.astronaut)
+//                    } label: {
+//                        HStack {
+//                            CircleImageView(imageName: crewMember.astronaut.id)
+//                                .containerRelativeFrame(.horizontal) {width, _ in
+//                                    width * 0.4
+//                                }
+//                            VStack(alignment: .leading) {
+//                                Text(crewMember.astronaut.name)
+//                                    .foregroundStyle(.white)
+//                                    .font(.headline)
+//                                
+//                                Text(crewMember.role)
+//                                    .foregroundStyle(.white.opacity(0.5))
+//                            }
+//                        }
+//                        .padding(.horizontal)
+//                    }
                 }
+            }
+            .navigationDestination(for: Astronaut.self ) { astronaut in
+                AstronautsView(astronaut: astronaut)
             }
             .padding(.vertical, 5)
         }

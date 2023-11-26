@@ -49,11 +49,6 @@ struct MissionView: View {
                         .padding(.bottom, 10)
                         .font(.title2.width(.compressed))
                     
-                    CaruselAstronautsView(crew: crew)
-                    
-                    Text(mission.description)
-                        
-                    
                     Rectangle()
                         .frame(height: 2)
                         .foregroundStyle(.lightBackgroudn)
@@ -62,6 +57,16 @@ struct MissionView: View {
                     Text("Crew")
                         .font(.title.width(.compressed))
                         .padding(.bottom, 5)
+                    
+                    CaruselAstronautsView(crew: crew)
+                    
+                    Rectangle()
+                        .frame(height: 2)
+                        .foregroundStyle(.lightBackgroudn)
+                        .padding(.vertical)
+                    
+                    Text(mission.description)
+        
                 }
                 .padding(.horizontal)
                 
@@ -74,10 +79,12 @@ struct MissionView: View {
         .navigationTitle(mission.displayName)
         .navigationBarTitleDisplayMode(.inline)
         .background(.darkBackground)
+
     }
     
     init(mission: Missions, astronauts: [String: Astronaut]) {
         
+        //print("mission init")
         self.mission = mission
         
         self.crew = mission.crew.map {member in
