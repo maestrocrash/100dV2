@@ -16,6 +16,7 @@
 		D32693522B152C4700818496 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32693512B152C4700818496 /* RatingView.swift */; };
 		D32693542B1530DB00818496 /* EmojiRatinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32693532B1530DB00818496 /* EmojiRatinView.swift */; };
 		D32693562B1534EE00818496 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32693552B1534EE00818496 /* DetailView.swift */; };
+		D359E23E2B16608C000EEF7A /* Date + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D359E23D2B16608C000EEF7A /* Date + Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		D32693512B152C4700818496 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		D32693532B1530DB00818496 /* EmojiRatinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatinView.swift; sourceTree = "<group>"; };
 		D32693552B1534EE00818496 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		D359E23D2B16608C000EEF7A /* Date + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 		D32693312B14E35300818496 = {
 			isa = PBXGroup;
 			children = (
+				D359E23D2B16608C000EEF7A /* Date + Ext.swift */,
 				D326933C2B14E35300818496 /* Bookworms */,
 				D326933B2B14E35300818496 /* Products */,
 			);
@@ -173,6 +176,7 @@
 				D32693542B1530DB00818496 /* EmojiRatinView.swift in Sources */,
 				D32693562B1534EE00818496 /* DetailView.swift in Sources */,
 				D326934C2B14E37D00818496 /* Book.swift in Sources */,
+				D359E23E2B16608C000EEF7A /* Date + Ext.swift in Sources */,
 				D32693522B152C4700818496 /* RatingView.swift in Sources */,
 				D32693502B14EAC100818496 /* AddBooksView.swift in Sources */,
 			);

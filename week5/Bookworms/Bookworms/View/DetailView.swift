@@ -9,7 +9,12 @@ import SwiftData
 import SwiftUI
 
 struct DetailView: View {
+    @Environment(\.modelContext) var modelContext
+    @Environment(\.dismiss) var dismiss
+    @State private var showDeleteAlert = false
+    
     let book: Book
+    
     
     var body: some View {
         ScrollView {
@@ -31,6 +36,9 @@ struct DetailView: View {
                 .font(.largeTitle)
                 .foregroundStyle(.secondary)
             
+            Text("\(book.dateBook)")
+                .font(.subheadline)
+            
             Text(book.review)
                 .padding()
             
@@ -41,6 +49,26 @@ struct DetailView: View {
         .navigationTitle(book.title)
         .navigationBarTitleDisplayMode(.inline)
         .scrollBounceBehavior(.basedOnSize)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button("Trash", systemImage: "trash") {
+                    showDeleteAlert = true
+                }
+            }
+        }
+        .alert("Delete book", isPresented: $showDeleteAlert) {
+            Button("Delete", role: .destructive, action: deleteBook)
+            Button("Cancel", role: .cancel) {
+                
+            }
+        } message: {
+            Text("Are you sure?")
+        }
+    }
+    
+    func deleteBook() {
+        modelContext.delete(book)
+        dismiss()
     }
 }
 
@@ -49,7 +77,9 @@ struct DetailView: View {
         
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try ModelContainer(for: Book.self, configurations: config)
-        let example = Book(title: "Test", author: "Test", genre: "Fantasy", review: "Крутая книга, читал бы и читал но не буду Крутая книга, читал бы и читал но не будуКрутая книга, читал бы и читал но не будуКрутая книга, читал бы и читал но не будуКрутая книга, читал бы и читал но не буду", rating: 5)
+        let dateBook = Date.now.getFormattedDate(format: "MMMM dd, yyyy")
+        
+        let example = Book(title: "Test", author: "Test", genre: "Fantasy", review: "Крутая книга, читал бы и читал но не буду Крутая книга, читал бы и читал но не будуКрутая книга, читал бы и читал но не будуКрутая книга, читал бы и читал но не будуКрутая книга, читал бы и читал но не буду", rating: 5, dateBook: dateBook)
         
         return DetailView(book: example)
                 .modelContainer(container)
