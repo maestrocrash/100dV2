@@ -28,7 +28,7 @@ struct ContentView: View {
                         }
                         Spacer()
                         
-                        if item.amount < 10 {
+                        if item.amount <= 10 {
                             Text(item.amount, format: .currency(code: item.currenncy.rawValue))
                                 .titleStyle10()
                         } else if item.amount < 100 {

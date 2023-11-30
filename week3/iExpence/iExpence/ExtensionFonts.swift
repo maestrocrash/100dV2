@@ -13,7 +13,7 @@ struct Title10: ViewModifier {
             .font(.largeTitle)
             .foregroundStyle(.white)
             .padding()
-            .background(.blue)
+            .background(.red)
             .clipShape(.rect(cornerRadius: 15))
     }
 }
@@ -24,7 +24,7 @@ struct Title100: ViewModifier {
             .font(.largeTitle)
             .foregroundStyle(.white)
             .padding()
-            .background(.red)
+            .background(.blue)
             .clipShape(.rect(cornerRadius: 15))
     }
 }

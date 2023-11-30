@@ -87,3 +87,4 @@ struct DetailView: View {
         return Text("Error")
     }
 }
+
